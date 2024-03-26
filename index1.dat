@@ -1,0 +1,661 @@
+
+main:
+; sub, MAIN:
+sub133:
+	mov di,varnext0
+	cs
+	mov [di],eax
+	mov di,varnext1
+	cs
+	mov [di],ebx
+	mov di,varnext2
+	cs
+	mov [di],ecx
+	mov di,varnext3
+	cs
+	mov [di],edx
+; , xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+	mov eax,0
+	mov bx,varnext11
+	cs
+	mov [bx],eax
+	mov eax,0
+	mov bx,varnext12
+	cs
+	mov [bx],eax
+	mov eax,0
+	mov bx,varnext13
+	cs
+	mov [bx],eax
+	mov eax,300
+	mov bx,varnext14
+	cs
+	mov [bx],eax
+	mov eax,200
+	mov bx,varnext15
+	cs
+	mov [bx],eax
+	mov eax,17
+	mov bx,varnext16
+	cs
+	mov [bx],eax
+	mov eax,0
+	mov bx,varnext17
+	cs
+	mov [bx],eax
+; , code
+	mov si,varnext11
+	mov ax,cs
+	call MEM32
+	mov di,varnext11
+	cs
+	mov [di],eax
+	mov si,varnext10
+	cs
+	mov eax,[si]
+	call scr
+	mov bx,varnext4
+	cs
+	mov al,[bx]
+	mov edi,140000h
+	mov ecx,64000
+	push ds
+	push es
+	mov edx,0
+	mov ds,dx
+	mov es,dx
+	call memfilld
+	pop es
+	pop ds
+	mov si,varnext4
+	cs
+	mov eax,[si]
+	mov di,varnext17
+	cs
+	mov [di],eax
+	lineno18:
+	mov si,varnext11
+	cs
+	mov eax,[si]
+	mov si,varnext17
+	cs
+	mov ebx,[si]
+	mov si,varnext4
+	cs
+	mov ecx,[si]
+	mov si,varnext4
+	cs
+	mov edx,[si]
+	call sub134
+	mov si,varnext17
+	cs
+	mov eax,[si]
+	mov si,varnext6
+	cs
+	mov ebx,[si]
+	clc
+	add eax,ebx
+	mov di,varnext17
+	cs
+	mov [di],eax
+	mov si,varnext5
+	cs
+	mov ebx,[si]
+	cmp eax,ebx
+	jle lineno18 
+	call setvideo
+	mov bx,varnext9
+	cs
+	mov eax,[bx]
+	call sleep
+	mov si,varnext8
+	cs
+	mov eax,[si]
+	call scr
+ret
+; sub, DRAWWINDOW:
+sub134:
+	mov di,varnext18
+	cs
+	mov [di],eax
+	mov di,varnext19
+	cs
+	mov [di],ebx
+	mov di,varnext20
+	cs
+	mov [di],ecx
+	mov di,varnext21
+	cs
+	mov [di],edx
+; , xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+	mov eax,0
+	mov bx,varnext28
+	cs
+	mov [bx],eax
+	mov eax,0
+	mov bx,varnext29
+	cs
+	mov [bx],eax
+	mov eax,0
+	mov bx,varnext30
+	cs
+	mov [bx],eax
+	mov eax,0
+	mov bx,varnext31
+	cs
+	mov [bx],eax
+	mov eax,0
+	mov bx,varnext32
+	cs
+	mov [bx],eax
+	mov eax,0
+	mov bx,varnext33
+	cs
+	mov [bx],eax
+	mov eax,0
+	mov bx,varnext34
+	cs
+	mov [bx],eax
+	mov eax,0
+	mov bx,varnext35
+	cs
+	mov [bx],eax
+	mov eax,0
+	mov bx,varnext36
+	cs
+	mov [bx],eax
+; , code
+	mov si,varnext28
+	mov ax,cs
+	call MEM32
+	mov di,varnext20
+	cs
+	mov [di],eax
+	mov si,varnext20
+	cs
+	mov edi,[si]
+	mov si,varnext25
+	cs
+	mov ecx,[si]
+	mov bx,varnext18
+	cs
+	mov esi,[bx]
+	mov bp,0
+	mov ds,bp
+	mov es,bp
+	call memcopy
+	mov ax,cs
+	mov ds,ax
+	mov es,ax
+
+	mov si,varnext34
+	cs
+	mov eax,[si]
+	mov si,varnext39
+	cs
+	mov ebx,[si]
+	mov ecx,0
+	mov edx,0
+	clc
+	mul ebx
+	mov di,varnext38
+	cs
+	mov [di],eax
+
+	mov si,varnext41
+	cs
+	mov eax,[si]
+	mov si,varnext38
+	cs
+	mov ebx,[si]
+	clc
+	add eax,ebx
+	mov di,varnext42
+	cs
+	mov [di],eax
+
+	mov si,varnext42
+	cs
+	mov eax,[si]
+	mov si,varnext44
+	cs
+	mov ebx,[si]
+	clc
+	add eax,ebx
+	mov di,varnext43
+	cs
+	mov [di],eax
+
+	mov bx,varnext43
+	cs
+	mov eax,[bx]
+	mov bx,varnext29
+	cs
+	mov [bx],eax
+
+	mov si,varnext34
+	cs
+	mov eax,[si]
+	mov si,varnext47
+	cs
+	mov ebx,[si]
+	mov ecx,0
+	mov edx,0
+	clc
+	mul ebx
+	mov di,varnext46
+	cs
+	mov [di],eax
+
+	mov si,varnext49
+	cs
+	mov eax,[si]
+	mov si,varnext46
+	cs
+	mov ebx,[si]
+	clc
+	add eax,ebx
+	mov di,varnext50
+	cs
+	mov [di],eax
+
+	mov si,varnext50
+	cs
+	mov eax,[si]
+	mov si,varnext52
+	cs
+	mov ebx,[si]
+	clc
+	add eax,ebx
+	mov di,varnext51
+	cs
+	mov [di],eax
+
+	mov bx,varnext51
+	cs
+	mov eax,[bx]
+	mov bx,varnext30
+	cs
+	mov [bx],eax
+
+	mov si,varnext29
+	cs
+	mov eax,[si]
+	mov si,varnext31
+	cs
+	mov ebx,[si]
+	clc
+	add eax,ebx
+	mov di,varnext55
+	cs
+	mov [di],eax
+
+	mov si,varnext55
+	cs
+	mov eax,[si]
+	mov si,varnext57
+	cs
+	mov ebx,[si]
+	clc
+	add eax,ebx
+	mov di,varnext56
+	cs
+	mov [di],eax
+
+	mov bx,varnext56
+	cs
+	mov eax,[bx]
+	mov bx,varnext35
+	cs
+	mov [bx],eax
+
+	mov si,varnext30
+	cs
+	mov eax,[si]
+	mov si,varnext32
+	cs
+	mov ebx,[si]
+	clc
+	add eax,ebx
+	mov di,varnext60
+	cs
+	mov [di],eax
+
+	mov si,varnext60
+	cs
+	mov eax,[si]
+	mov si,varnext62
+	cs
+	mov ebx,[si]
+	clc
+	add eax,ebx
+	mov di,varnext61
+	cs
+	mov [di],eax
+
+	mov bx,varnext61
+	cs
+	mov eax,[bx]
+	mov bx,varnext36
+	cs
+	mov [bx],eax
+	mov si,varnext29
+	cs
+	mov ax,[si]
+	mov si,boxdx
+	cs
+	mov [si],ax
+	mov si,varnext30
+	cs
+	mov ax,[si]
+	mov si,boxdy
+	cs
+	mov [si],ax
+	mov si,varnext35
+	cs
+	mov ax,[si]
+	mov si,boxdx1
+	cs
+	mov [si],ax
+	mov si,varnext36
+	cs
+	mov ax,[si]
+	mov si,boxdy1
+	cs
+	mov [si],ax
+	mov si,varnext33
+	cs
+	mov al,[si]
+	mov si,boxdcolor
+	cs
+	mov [si],al
+	call boxd32
+	mov si,varnext29
+	xor eax,eax
+	cs
+	mov ax,[si]
+	mov si,varnext35
+	xor ebx,ebx
+	cs
+	mov bx,[si]
+	sub ebx,eax
+	mov eax,ebx
+	push eax
+	xor ecx,ecx
+	xor edx,edx
+	mov ebx,4
+	div ebx
+	xor ecx,ecx
+	xor edx,edx
+	mul ebx
+	pop ebx
+	sub ebx,eax
+	mov si,varnext35
+	xor eax,eax
+	cs
+	mov ax,[si]
+	sub eax,ebx
+	mov si,boxx
+	mov [si],ax
+	mov si,varnext30
+	mov ax,[si]
+	mov si,boxy
+	mov [si],ax
+	mov si,varnext35
+	mov ax,[si]
+	mov si,boxx1
+	mov [si],ax
+	mov si,varnext36
+	mov ax,[si]
+	mov si,boxy1
+	mov [si],ax
+	mov si,varnext33
+	mov al,[si]
+	mov si,boxcolor
+	mov [si],al
+	call box32
+	mov si,varnext29
+	cs
+	mov ax,[si]
+	mov si,hlinex
+	cs
+	mov [si],ax
+	mov si,varnext30
+	cs
+	mov ax,[si]
+	mov si,hliney
+	cs
+	mov [si],ax
+	mov si,varnext35
+	cs
+	mov ax,[si]
+	mov si,hlinex1
+	cs
+	mov [si],ax
+	mov si,varnext27
+	cs
+	mov al,[si]
+	mov si,hlinecolor
+	cs
+	mov [si],al
+	call hlined32
+	mov si,varnext29
+	xor eax,eax
+	cs
+	mov ax,[si]
+	mov si,varnext35
+	xor ebx,ebx
+	cs
+	mov bx,[si]
+	sub ebx,eax
+	mov eax,ebx
+	push eax
+	xor ecx,ecx
+	xor edx,edx
+	mov ebx,4
+	div ebx
+	xor ecx,ecx
+	xor edx,edx
+	mul ebx
+	pop ebx
+	sub ebx,eax
+	mov si,varnext35
+	xor eax,eax
+	cs
+	mov ax,[si]
+	sub eax,ebx
+	mov si,hlinex
+	cs
+	mov [si],ax
+	mov si,varnext30
+	cs
+	mov ax,[si]
+	mov si,hliney
+	cs
+	mov [si],ax
+	mov si,varnext35
+	cs
+	mov ax,[si]
+	mov si,hlinex1
+	cs
+	mov [si],ax
+	mov si,varnext27
+	cs
+	mov al,[si]
+	mov si,hlinecolor
+	cs
+	mov [si],al
+	call hlined32
+	mov si,varnext35
+	cs
+	mov ax,[si]
+	mov si,vlinex
+	cs
+	mov [si],ax
+	mov si,varnext30
+	cs
+	mov ax,[si]
+	mov si,vliney
+	cs
+	mov [si],ax
+	mov si,varnext36
+	cs
+	mov ax,[si]
+	mov si,vliney1
+	cs
+	mov [si],ax
+	mov si,varnext27
+	cs
+	mov al,[si]
+	mov si,vlinecolor
+	cs
+	mov [si],al
+	call vline32
+	mov si,varnext29
+	cs
+	mov ax,[si]
+	mov si,hlinex
+	cs
+	mov [si],ax
+	mov si,varnext36
+	cs
+	mov ax,[si]
+	mov si,hliney
+	cs
+	mov [si],ax
+	mov si,varnext35
+	cs
+	mov ax,[si]
+	mov si,hlinex1
+	cs
+	mov [si],ax
+	mov si,varnext27
+	cs
+	mov al,[si]
+	mov si,hlinecolor
+	cs
+	mov [si],al
+	call hlined32
+	mov si,varnext29
+	xor eax,eax
+	cs
+	mov ax,[si]
+	mov si,varnext35
+	xor ebx,ebx
+	cs
+	mov bx,[si]
+	sub ebx,eax
+	mov eax,ebx
+	push eax
+	xor ecx,ecx
+	xor edx,edx
+	mov ebx,4
+	div ebx
+	xor ecx,ecx
+	xor edx,edx
+	mul ebx
+	pop ebx
+	sub ebx,eax
+	mov si,varnext35
+	xor eax,eax
+	cs
+	mov ax,[si]
+	sub eax,ebx
+	mov si,hlinex
+	cs
+	mov [si],ax
+	mov si,varnext36
+	cs
+	mov ax,[si]
+	mov si,hliney
+	cs
+	mov [si],ax
+	mov si,varnext35
+	cs
+	mov ax,[si]
+	mov si,hlinex1
+	cs
+	mov [si],ax
+	mov si,varnext27
+	cs
+	mov al,[si]
+	mov si,hlinecolor
+	cs
+	mov [si],al
+	call hlined32
+	mov si,varnext29
+	cs
+	mov ax,[si]
+	mov si,vlinex
+	cs
+	mov [si],ax
+	mov si,varnext30
+	cs
+	mov ax,[si]
+	mov si,vliney
+	cs
+	mov [si],ax
+	mov si,varnext36
+	cs
+	mov ax,[si]
+	mov si,vliney1
+	cs
+	mov [si],ax
+	mov si,varnext27
+	cs
+	mov al,[si]
+	mov si,vlinecolor
+	cs
+	mov [si],al
+	call vline32
+
+	mov si,varnext33
+	cs
+	mov eax,[si]
+	mov si,varnext67
+	cs
+	mov ebx,[si]
+	clc
+	add eax,ebx
+	mov di,varnext66
+	cs
+	mov [di],eax
+
+	mov si,varnext66
+	cs
+	mov eax,[si]
+	mov si,varnext69
+	cs
+	mov ebx,[si]
+	clc
+	add eax,ebx
+	mov di,varnext68
+	cs
+	mov [di],eax
+
+	mov bx,varnext68
+	cs
+	mov eax,[bx]
+	mov bx,varnext33
+	cs
+	mov [bx],eax
+	mov si,varnext18
+	cs
+	mov edi,[si]
+	mov si,varnext25
+	cs
+	mov ecx,[si]
+	mov bx,varnext20
+	cs
+	mov esi,[bx]
+	mov bp,0
+	mov ds,bp
+	mov es,bp
+	call memcopy
+	mov ax,cs
+	mov ds,ax
+	mov es,ax
+
+ret
+
+ret
