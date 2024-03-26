@@ -341,6 +341,7 @@ void head(){
 			addcode ("	mov ds,ax");
 			addcode ("      mov ebx,180004h"); 
 			addcode ("      mov [ebx],eax");
+			addcode ("	retf");
 			addcode ("	mov ax,cs");
 			addcode ("	mov ds,ax");
 			addcode ("	mov ax,0ffffh");
@@ -795,11 +796,8 @@ void head(){
 			addcode ("	mov ax,cs");
 			addcode ("	mov cx,0x1000");
 			addcode ("	add ax,cx");
-			addcode ("	mov ss,ax");
 			addcode ("	mov ax,0xffff");
-			addcode ("	mov sp,ax");
 			addcode ("	xor ax,ax");
-			addcode ("	push ax");
 			addcode ("		;end stack 64k");
 			addcode ("		;start alocate");
 			addcode ("	mov bx,L18");
