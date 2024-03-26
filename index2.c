@@ -350,6 +350,7 @@ void head(){
 			addcode ("	xor ax,ax");
 			addcode ("	push ax");
 			addcode ("	xor ax,ax");
+						addcode ("	retf");
 			addcode ("	int 0x21");
 			addcode ("	ret");
 			addcode ("ret");
