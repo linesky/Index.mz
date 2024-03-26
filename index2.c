@@ -314,7 +314,7 @@ void head(){
 			addcode (".paragraphs: dw 1       ; size of header + relocation table, in paragraphs");
 			addcode (".minalloc: dw 0         ; minimum required additional memory, in paragraphs");
 			addcode (".maxalloc: dw 0xFFFF    ; maximum memory to be allocated, in paragraphs");
-			addcode (".in_ss: dw 100h           ; initial relative value of the stack segment");
+			addcode (".in_ss: dw 1000h           ; initial relative value of the stack segment");
 			addcode (".in_sp: dw 0xF000       ; initial sp value");
 			addcode (".checksum: dw 0         ; checksum: 1's complement of sum of all words");
 			addcode (".in_ip: dw mainstart        ; initial ip value");
