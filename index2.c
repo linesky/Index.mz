@@ -324,6 +324,9 @@ void head(){
 			addcode (".overlay2: dw 0");
 			addcode (".reserv : times 1 db 0x90 ");
 			addcode ("mainstart: db 090h   "); 
+			addcode ("mov ax,ds   ");
+			addcode ("mov ds,ax   "); 
+			addcode ("mov es,ax   ");
 			addcode ("main1:");
 			addcode ("jmp start");
 			addcode ("db 'build in index32 developer tools.... '");
