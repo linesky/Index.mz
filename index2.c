@@ -307,11 +307,11 @@ void head(){
 			addcode ("[bits 16]");
 			addcode ("org 0h");
 			addcode ("host_exe_header:");
-			addcode (".signature: dw 'MZ'     ; the 'MZ' characters");
+			addcode (".signature: db 'MZ'     ; the 'MZ' characters");
 			addcode (".last_page_size: dw 1   ; number of used bytes in the final file page, 0 for all");
 			addcode (".page_count: dw 1       ; number of file pages including any last partial page");
 			addcode (".reloc: dw 0            ; number of relocation entries after the header");
-			addcode (".paragraphs: dw 1       ; size of header + relocation table, in paragraphs");
+			addcode (".paragraphs: dw 0       ; size of header + relocation table, in paragraphs");
 			addcode (".minalloc: dw 0         ; minimum required additional memory, in paragraphs");
 			addcode (".maxalloc: dw 0xFFFF    ; maximum memory to be allocated, in paragraphs");
 			addcode (".in_ss: dw 1000h           ; initial relative value of the stack segment");
